@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/id_listas"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/id_layoutNames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/id_tituloPublicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:paddingTop="10dp"
+
+            android:textSize="15dp"
+
+            android:text="@string/title"
+
+            />
+
+        <TextView
+            android:id="@+id/id_nombre_publicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:paddingTop="10dp"
+
+            android:textSize="15dp"
+
+            android:text="@string/detallePublicacion"
+
+            />
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+<!--    val action: NavDirections =ProfileFragmentDirections.actionProfileFragmentToPublishFragment(userDetails)-->
+<!--    findNavController().navigate(action)-->

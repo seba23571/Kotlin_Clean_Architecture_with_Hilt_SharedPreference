@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_relativelayout_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+
+
+
+    >
+
+    <LinearLayout
+        android:id="@+id/id_layoutNames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+
+        >
+
+        <TextView
+            android:id="@+id/id_tiems_nombre_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:layout_weight="5"
+            android:textSize="22dp"
+
+            android:text="@string/username" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_phoneImageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_layoutNames"
+        android:orientation="horizontal"
+
+        android:paddingLeft="10dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/id_phone_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:src="@drawable/ic_phone"
+
+            />
+
+        <TextView
+            android:id="@+id/id_phoneNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/phonenumber"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_imageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_phoneImageText"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+
+
+        >
+
+
+        <ImageView
+            android:id="@+id/id_mail_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:src="@drawable/ic_mail" />
+
+        <TextView
+            android:id="@+id/id_mail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/mailname"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_tercerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_imageText"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+
+
+
+        >
+
+        <TextView
+            android:id="@+id/id_verPublicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/verpublicaciones"
+            android:textColor="@color/green"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Users</string>
+    <string name="search_hint">Busqueda por usuarios</string>
+    <string name="username">User Name</string>
+    <string name="phonenumber">Phones Number</string>
+    <string name="mailname">mail Name</string>
+    <string name="verpublicaciones">Ver Publicaciones</string>
+    <string name="search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_messaget">Error no hay internet</string>
+
+    <string name="userPublish">Publicaciones del usuario</string>
+    <string name="publishList">Listas de las Publicaciones</string>
+    <string name="title">Titulo</string>
+    <string name="detallePublicacion">Detalles</string>
+
+
+</resources>
