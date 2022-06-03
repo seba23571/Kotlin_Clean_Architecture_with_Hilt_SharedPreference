@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".allusers_json.presentation.userdetail.PublishFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ID_tituloPrincipal"
+        android:gravity="center"
+        android:tooltipText="show user and publish"
+        android:layout_marginTop="10dp"
+
+        android:background="@color/cardview_shadow_start_color">
+
+        <TextView
+            android:id="@+id/id_titelUserPUBLISH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userPublish"
+            android:textAlignment="center"
+            android:textColor="#03221F"
+            android:textSize="15dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_userDeailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/ID_tituloPrincipal"
+
+        >
+
+        <TextView
+            android:id="@+id/id_nameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:textAlignment="center"
+            android:textColor="#03221F"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/id_mailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mailname"
+            android:textAlignment="center"
+            android:textColor="#03221F"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/id_phoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phonenumber"
+            android:textAlignment="center"
+            android:textColor="#03221F"
+            android:textSize="15dp"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_UserDetailNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/id_userDeailTitle"
+
+        >
+        <TextView
+            android:id="@+id/id_userNamePublis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+
+            />
+        <TextView
+            android:id="@+id/id_mailNamePublis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mailname"
+            android:layout_marginLeft="30dp"
+
+
+            />
+        <TextView
+            android:id="@+id/id_phonePublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phonenumber"
+            android:layout_marginLeft="20dp"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/idultimo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/id_UserDetailNav"
+        >
+
+        <TextView
+            android:id="@+id/id_listasDePublicaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/publishList"
+            android:layout_margin="10dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/items_publicaciones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/idultimo"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        android:paddingTop="15dp"
+        tools:listitem="@layout/listas_publicaciones"
+        >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressf_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_textViewError"
+        tools:text="@string/error_messaget"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        />
+</RelativeLayout>

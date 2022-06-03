@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+
+    android:id="@+id/drawer_layout_sebas"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.supraweb.users.ui.home.HomeActivity"
+
+
+
+
+    >
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/id_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimary"
+            >
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+        <fragment
+            android:id="@+id/id_fragmentNavigation"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph"
+            />
+
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu"
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

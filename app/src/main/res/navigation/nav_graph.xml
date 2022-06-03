@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userPresentationFragment">
+
+
+
+
+    <fragment
+        android:id="@+id/userPresentationFragment"
+        android:name="com.supraweb.users.allusers_json.presentation.userlist.UserPresentationFragment"
+        android:label="fragment_user_presentation"
+        tools:layout="@layout/fragment_user_presentation" >
+        <action
+            android:id="@+id/action_userPresentationFragment_to_publishFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/publishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/publishFragment"
+        android:name="com.supraweb.users.allusers_json.presentation.userdetail.PublishFragment"
+        android:label="fragment_publish"
+        tools:layout="@layout/fragment_publish" >
+        <argument
+            android:name="userModel"
+            app:argType="com.supraweb.users.allusers_json.domain.model.UserModelDomain" />
+    </fragment>
+
+
+</navigation>
