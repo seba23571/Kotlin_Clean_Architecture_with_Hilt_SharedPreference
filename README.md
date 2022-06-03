@@ -1,8 +1,8 @@
 # Kotlin_Clean_Architecture_with_Hilt
  
 # Ide Version : Android Studio Dolphin | 2021.3.1 Canary 6
- 
-    
+
+# Sebas developed.    
 
 
 # Descripciòn.
