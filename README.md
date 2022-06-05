@@ -12,7 +12,7 @@ proyecto Android usando las api rest desde https://jsonplaceholder.typicode.com/
 es un buscador que permite atraves de un recycler view buscar por nombre de usuarios y sus correspondientes publicaciones.
 
 
-Usando **Clean Architecture** fusionado con el patrón **MVVM** con ViewModel y LiveData ,**HILT** COROUTINES para peticiones asincronicas con RETROFIT, ROOM DATABASE SQLITE Y SHAREPREFERENCE.Y COMPONENTES DE NAVEGACION.
+Usando **Clean Architecture** fusionado con el patrón **MVVM** con ViewModel y LiveData ,**HILT como Framework en dependency injections** COROUTINES para peticiones asincronicas con RETROFIT, ROOM DATABASE SQLITE Y SHAREPREFERENCE.Y COMPONENTES DE NAVEGACION.
 usa un auto refresh cada 6 horas en el hipotetico caso que se produzcan actualizaciones en el backend para que se actualice los datos de las tablas ROOM DATABASE SQLITE.
 
 
