@@ -1,6 +1,7 @@
 package com.supraweb.users.allusers_json.di
 
 import android.app.Application
+import android.util.Log
 import androidx.room.Room
 import com.supraweb.users.allusers_json.data.local.DatabaseUsersRoom
 import com.supraweb.users.allusers_json.data.local.sharedpreference.UserSharePreference
@@ -16,26 +17,24 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object UserModule {
+private const val BASE_URL = "https://jsonplaceholder.typicode.com"
 
     @Singleton
     @Provides
-    fun providesHttpLoggingInterceptor() = HttpLoggingInterceptor()
-        .apply {
-            level = HttpLoggingInterceptor.Level.BODY
-        }
-
-
-    @Singleton
-    @Provides
-    fun providesOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient =
+    fun providesOkHttpClient(httpLoggingInterceptor: IInterceptorModule, logger: LoggingInterceptor): OkHttpClient =
         OkHttpClient
             .Builder()
-            .addInterceptor(httpLoggingInterceptor)
+            .addInterceptor( httpLoggingInterceptor)
+            .addInterceptor(logger.loggger)
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .writeTimeout(30, TimeUnit.SECONDS)
             .build()
 
 
@@ -44,7 +43,7 @@ object UserModule {
     fun providerRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             // .baseUrl("https://drawsomething-59328-default-rtdb.europe-west1.firebasedatabase.app/")
-            .baseUrl("https://jsonplaceholder.typicode.com")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
@@ -81,6 +80,16 @@ object UserModule {
         return UserRepositoryDomainImpl(api, db.getFromDataBaseUserDaoTable() ,pref)
 
     }
+
+
+
+    @Singleton
+    @Provides
+    fun provideSomeString(app: Application) : IInterceptorModule { //     fun provideSomeString(@ApplicationContext appContext: Context) : IFacturaModule {
+       // Log.d(TAG, "provideSomeString: provideSomeString" +app.hashCode())
+        return  InterceptorModule(app)
+    }
+
 
     @Provides
     @Singleton
